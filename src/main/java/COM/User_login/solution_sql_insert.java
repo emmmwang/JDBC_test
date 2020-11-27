@@ -13,6 +13,13 @@ import java.util.Scanner;
  *      PreparedStatement属于预编译的数据库操作对象
  *      PreparedStatement的原理:预先对SQL语句的框架进行编译，然后再给SQL语句传“值”
  *
+ * statement和prepareStatement对比
+ *      -statement存在sql注入问题，PreparedStatement解决了sql注入问题
+ *      -是他特么net是编译一次执行一次，preparedStatement是编译一次执行n次，preparedStatement效率较高
+ *      -PreparedStatement会在编译阶段做类型的安全检查
+ *
+ *      所以prepareStatement使用较多，只有极少数的情况下需要使用statement
+ *      只有当业务方面要求必须支持sql注入的时候采用statement
  */
 public class solution_sql_insert {
     public static void main(String[] args) {
