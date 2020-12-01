@@ -25,6 +25,7 @@ public class main {
             //1.注册驱动
             Class.forName(driver);
             //2.获取连接
+            //getConnection的三个参数，连接地址，用户名，用户密码
             conn=DriverManager.getConnection(url,user,password);
             //3.获取数据库连接对象
             stmt=conn.createStatement();
